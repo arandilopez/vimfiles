@@ -6,7 +6,7 @@ if type vim > /dev/null 2>&1; then
     echo "Previous Vim settings are in vimrc_bak"
   fi
   echo "Linking your .vimrc"
-  ln -s ../init.vim ~/.vimrc
+  ln -s `pwd`/init.vim ~/.vimrc
 else
   echo "You don't have vim installed"
 fi
@@ -18,7 +18,7 @@ if type nvim > /dev/null 2>&1; then
   fi
   echo "Linking your .config/nvim/init.vim for Neovim"
   mkdir -p ~/.config/nvim
-  echo "set runtimepath^=~/.vim runtimepath+=~/.vim/after" >> ~/.config/nvim/init.vim
+  echo "set runtimepath^=~/.vim runtimepath+=~/.vim/after" > ~/.config/nvim/init.vim
   echo "let &packpath = &runtimepath" >> ~/.config/nvim/init.vim
   echo "source ~/.vimrc" >> ~/.config/nvim/init.vim
 fi
