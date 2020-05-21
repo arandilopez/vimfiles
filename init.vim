@@ -1,58 +1,69 @@
-" Iniciar el manejador de plugins
+" Plugins
 call plug#begin('~/.vim/bundle')
-Plug 'dracula/vim'
+" Editor features
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'honza/vim-snippets'
-Plug 'garbas/vim-snipmate'
-Plug 'tomtom/tlib_vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-commentary'
-Plug 'https://tpope.io/vim/surround'
-Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-endwise'
-Plug 'jiangmiao/auto-pairs'
-Plug 'wakatime/vim-wakatime'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'joshdick/onedark.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'zsh-users/zsh-autosuggestions'
 Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-startify'
+Plug 'liuchengxu/vim-which-key'
+" Tooling
+Plug 'editorconfig/editorconfig-vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'https://tpope.io/vim/surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
-Plug 'moll/vim-bbye'
+Plug 'Yggdroot/indentLine'
+" Lang suppport
+Plug 'sheerun/vim-polyglot'
+Plug 'kchmck/vim-coffee-script'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-unimpaired'
-Plug 'Yggdroot/indentLine'
 Plug 'noahfrederick/vim-laravel'
 Plug 'noahfrederick/vim-composer'
+" Themes
+Plug 'dracula/vim'
+Plug 'joshdick/onedark.vim'
+" Other
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'jiangmiao/auto-pairs'
+Plug 'wakatime/vim-wakatime'
+Plug 'terryma/vim-multiple-cursors'
+" Plug 'zsh-users/zsh-autosuggestions'
+Plug 'moll/vim-bbye'
+Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
-Plug 'mhinz/vim-startify'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'kana/vim-textobj-user'
 Plug 'ap/vim-buftabline'
 Plug 'junegunn/gv.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'liuchengxu/vim-which-key'
 call plug#end()
-" Settings de VIM
-set nocompatible              " be iMproved, required
-set noswapfile " Sin archivos fantasma
-set autoread " Leer el archivo automaticamente si sufre cambios externos de vim
-set encoding=utf8 " siempre en utf8
+
+" Vim settings
+" be iMproved, required
+set nocompatible
+" No ghost files
+set noswapfile
+" Read the file as soon it changes
+set autoread
+" Always in UTF-8
+set encoding=utf8
 " Disable sounds
 set vb t_vb="
 set noerrorbells
 set visualbell
+
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -70,75 +81,73 @@ if (has("termguicolors"))
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-" identacion chida para codigo
+
+" Enable indentation and syntax
 filetype plugin indent on
-" Iniciar la syntaxis y thema de onedark
 syntax on
+" Theme settings: Default onedark
 let g:onedark_termcolors=256
-" let g:onedark_terminal_italics=1
 colorscheme onedark
 
+" Set a timeout to less than a second
 set timeout timeoutlen=500
-" numero de lineas
+" Enable numbering
 set number
 set wrap
-set colorcolumn=121 " Color sobre la columna 120 para marcar que la linea ya es muy larga
 " Set Proper Tabs
 set tabstop=2
 set shiftwidth=2
 set shiftround
 set smarttab
 set expandtab
+" Line guide
 set cursorline
 set showmatch
+" Hide mouse when using vim
 set mousehide
+" Show command
 set showcmd
-" Caracteres para mostar espacios, tabs y fin de linea
+" Show these char for hiden chars
 set list
 set list lcs=trail:·,space:·,tab:»·,eol:¬
-" Tamaño de linea, se ve mejor en gui
-" set linespace=10
-" el plugin de lightline ya pone el estatus chido
+
+" Lightline settings
 set noshowmode
 set laststatus=2
-" ya la tecla backspace funciona para borrar
+" Use backspaceto delete
 set backspace=2
+" Menu settings
 set wildignore+=*/tmp/*,*/vendor/*,*/node_modules/*,*/.git/*,*/log/*,*.so,*.swp,*.zip
 set wildmenu
 " Case Insensitivity Pattern Matching
 set ignorecase
-" Overrides ignorecase if pattern contains upcase
+" Overrides ignorecase in pattern
 set smartcase
 " Highlight search matches
 set hlsearch
 set incsearch
-set sc " Show count of selected lines or chars
-" Asignar el tipo de cursor al usar una interfaz grafica
-" set guicursor+=i:hor1-blinkwait0,r:hor1
+" Show count of selected lines or chars
+set sc
 " if hidden is not set, TextEdit might fail.
 set hidden
-
 " Some servers have issues with backup files
 set nobackup
 set nowritebackup
-
 " Better display for messages
 set cmdheight=2
-
 " You will have bad experience for diagnostic messages when it's default
 set updatetime=300
-
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
-
 " always show signcolumns
 set signcolumn=yes
-
 " Disable concealing in all languages, eg: md and tex
 set conceallevel=0
-set splitbelow "Make splits default to below...
-set splitright "And to the right. This feels more natural.
-" Las @ es lo mejor de esta fuente
+"Make splits default to below...
+set splitbelow
+"And to the right. This feels more natural.
+set splitright
+" When running in gvim
 if has("gui_running")
   set guioptions-=e  " remove gui tabs
   set guioptions-=m  " remove menu bar
@@ -148,8 +157,10 @@ if has("gui_running")
   set guioptions-=L  " remove left-hand scroll bar
   set guioptions-=l
   if has("gui_gtk")
+    " Font for gVim
     set guifont=Fira\ Mono\ 14
   elseif has("gui_macvim")
+    " Font for Macvim
     set guifont=Fira\ Mono:h16
   endif
 endif
@@ -164,8 +175,8 @@ endif
 
 " Tags for navigations
 set tags+=./tags " use local tags in project
-
-let mapleader=" "
+" Set leader key as Space
+let mapleader="\<Space>"
 " Shortcuts
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 " Use <c-space> to trigger completion.
@@ -175,20 +186,18 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-" Habilitar nerdtree
+" Open and close NERDTree
 map <Leader>op :NERDTreeToggle<CR>
-
 " Re-indent all lines
 nnoremap <Leader>fa mlgg=G`l
-nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
-nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
-" Leader mappings
+" WakaTimeToday
 nnoremap <Leader>wtt :WakaTimeToday<CR>
 " Clean open buffers and delete them from unlisted
 nnoremap <Leader>bd :Bwipeout<CR>
 nnoremap <Leader>bK :bufdo :Bwipeout<CR>:Startify<CR>
-" nmap <Leader>v :tabe ~/.vimrc<cr>
+" Open Vim source file
+nmap <Leader>fvs :tabe ~/.vimrc<cr>
+" Buffers
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprev<CR>
 "Sort PHP use statements
@@ -232,5 +241,7 @@ let g:lightline = {
       \ },
       \ }
 
-autocmd BufWritePre * %s/\s\+$//e " Delete trailing spaces before save
+" Delete trailing spaces before save
+autocmd BufWritePre * %s/\s\+$//e
+" Copy filename to clipboard
 command CopyFilePath silent! let @+ = expand("%:p")
