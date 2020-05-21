@@ -1,5 +1,24 @@
-#! /usr/bin/sh
+#! /bin/sh
 
-if [[ type vim &> /dev/null ]]; then
-  ln ../init.vim ~/.vimrc
+if type vim > /dev/null 2>&1; then
+  if [[ -f ~/.vimrc ]]; then
+    mv ~/.vimrc ~/.vimrc_bak
+    echo "Previous Vim settings are in vimrc_bak"
+  fi
+  echo "Linking your .vimrc"
+  ln -s ../init.vim ~/.vimrc
+else
+  echo "You don't have vim installed"
+fi
+
+if type nvim > /dev/null 2>&1; then
+  if [[ -d ~/.config/nvim ]]; then
+    mv ~/.config/nvim ~/.config/nvim_bak
+    echo "Previous Neovim settings are in nvim_bak"
+  fi
+  echo "Linking your .config/nvim/init.vim for Neovim"
+  mkdir -p ~/.config/nvim
+  echo "set runtimepath^=~/.vim runtimepath+=~/.vim/after" >> ~/.config/nvim/init.vim
+  echo "let &packpath = &runtimepath" >> ~/.config/nvim/init.vim
+  echo "source ~/.vimrc" >> ~/.config/nvim/init.vim
 fi
