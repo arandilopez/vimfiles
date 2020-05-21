@@ -1,0 +1,5 @@
+#! /usr/bin/sh
+
+if [[ type vim &> /dev/null ]]; then
+  ln ../init.vim ~/.vimrc
+fi
