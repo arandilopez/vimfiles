@@ -16,4 +16,8 @@ Clone this repository into your home directory as `~/.vim` and then install the 
 
 ## Plugins
 
+TODO: List all plugins
+
 ## Keymaps
+
+TODO: List all keymaps
