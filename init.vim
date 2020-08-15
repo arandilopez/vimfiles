@@ -179,13 +179,6 @@ set tags+=./tags " use local tags in project
 let mapleader="\<Space>"
 " Shortcuts
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 " Open and close NERDTree
 map <Leader>op :NERDTreeToggle<CR>
 " Re-indent all lines
