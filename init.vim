@@ -30,7 +30,7 @@ Plug 'tpope/vim-bundler'
 Plug 'noahfrederick/vim-laravel'
 Plug 'noahfrederick/vim-composer'
 " Themes
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
 " Other
 Plug 'tomtom/tlib_vim'
@@ -86,8 +86,8 @@ endif
 filetype plugin indent on
 syntax on
 " Theme settings: Default onedark
-let g:onedark_termcolors=256
-colorscheme onedark
+" let g:onedark_termcolors=256
+colorscheme dracula
 
 " Set a timeout to less than a second
 set timeout timeoutlen=500
@@ -220,7 +220,7 @@ let g:indentLine_fileTypeExclude = [ 'startify' ]
 let g:indentLine_char = '|'
 " config de lightline, muestra el nombre del branch igual
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
