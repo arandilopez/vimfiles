@@ -188,11 +188,10 @@ nnoremap <Leader>wtt :WakaTimeToday<CR>
 " Clean open buffers and delete them from unlisted
 nnoremap <Leader>bd :Bwipeout<CR>
 nnoremap <Leader>bK :bufdo :Bwipeout<CR>:Startify<CR>
-" Open Vim source file
-nmap <Leader>fvs :tabe ~/.vimrc<cr>
-" Buffers
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprev<CR>
+" Open Vim source file
+nmap <Leader>fvs :tabe ~/.vimrc<cr>
 "Sort PHP use statements
 "http://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
 vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
@@ -238,3 +237,4 @@ let g:lightline = {
 autocmd BufWritePre * %s/\s\+$//e
 " Copy filename to clipboard
 command CopyFilePath silent! let @+ = expand("%:p")
+nnoremap <Leader>yp :CopyFilePath<CR>
