@@ -39,7 +39,7 @@ function! DelEmptyLineAbove()
   end
 endfunction
 
-noremap <silent> <Leader>] :call DelEmptyLineBelow()<CR>
-noremap <silent> <Leader>[ :call DelEmptyLineAbove()<CR>
-noremap <silent> <Leader>} :call AddEmptyLineBelow()<CR>
-noremap <silent> <Leader>{ :call AddEmptyLineAbove()<CR>
+noremap <silent>}o :call DelEmptyLineBelow()<CR>
+noremap <silent>{o :call DelEmptyLineAbove()<CR>
+noremap <silent>]o :call AddEmptyLineBelow()<CR>
+noremap <silent>[o :call AddEmptyLineAbove()<CR>
