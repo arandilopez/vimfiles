@@ -9,7 +9,7 @@ font definitions, plugins, custom functions and more.
 
 Clone this repository into your home directory as `~/.vim` and then install the plugins. Such as:
 
-    git clone https://github.com/lucascaton/vimfiles.git ~/.vim
+    git clone https://github.com/arandilopez/vimfiles.git ~/.vim
     cd .vim
     bin/install
     vim +PlugInstall +qall
