@@ -1,0 +1,13 @@
+{
+  /* Coc related preferences */
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "json"
+  ],
+
+  /* Ruby */
+  "solargraph.diagnostics": true
+}

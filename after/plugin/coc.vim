@@ -44,3 +44,5 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Prettier settings
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vmap <leader>fc  <Plug>(coc-format-selected)
+nmap <leader>fc  <Plug>(coc-format-selected)
