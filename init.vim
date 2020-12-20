@@ -92,7 +92,7 @@ colorscheme dracula
 " Set a timeout to less than a second
 set timeout timeoutlen=500
 " Enable numbering
-set number
+set number relativenumber
 set wrap
 " Set Proper Tabs
 set tabstop=2
