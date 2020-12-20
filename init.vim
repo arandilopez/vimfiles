@@ -231,7 +231,7 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype', ] ]
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'cocstatus'] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
@@ -239,6 +239,7 @@ let g:lightline = {
       \ },
       \ }
 
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 " Delete trailing spaces before save
 autocmd BufWritePre * %s/\s\+$//e
 " Copy filename to clipboard
