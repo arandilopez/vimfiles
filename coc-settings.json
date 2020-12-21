@@ -1,5 +1,6 @@
 {
-  /* Coc related preferences */
+  // Coc related preferences
+  // Filetypes to format on save
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
@@ -8,6 +9,6 @@
     "json"
   ],
 
-  /* Ruby */
+  // Ruby
   "solargraph.diagnostics": true
 }
