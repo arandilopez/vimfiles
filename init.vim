@@ -86,8 +86,9 @@ endif
 filetype plugin indent on
 syntax on
 " Theme settings: Default onedark
-" let g:onedark_termcolors=256
-colorscheme dracula
+let g:onedark_termcolors=256
+colorscheme onedark
+" colorscheme dracula
 
 " Set a timeout to less than a second
 set timeout timeoutlen=500
