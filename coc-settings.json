@@ -6,9 +6,11 @@
     "typescript",
     "javascriptreact",
     "typescriptreact",
-    "json"
+    "json",
+    "ruby"
   ],
 
   // Ruby
-  "solargraph.diagnostics": true
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true
 }

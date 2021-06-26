@@ -10,6 +10,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key'
+Plug 'mattn/emmet-vim'
 " Tooling
 Plug 'editorconfig/editorconfig-vim'
 Plug 'garbas/vim-snipmate'
@@ -29,6 +30,7 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-bundler'
 Plug 'noahfrederick/vim-laravel'
 Plug 'noahfrederick/vim-composer'
+Plug 'pantharshit00/vim-prisma'
 " Themes
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
@@ -246,3 +248,6 @@ autocmd BufWritePre * %s/\s\+$//e
 " Copy filename to clipboard
 command CopyFilePath silent! let @+ = expand("%:p")
 nnoremap <Leader>yp :CopyFilePath<CR>
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,liquid,haml,erb EmmetInstall
