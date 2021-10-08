@@ -251,3 +251,4 @@ nnoremap <Leader>yp :CopyFilePath<CR>
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,liquid,haml,erb EmmetInstall
+let g:snipMate = { 'snippet_version' : 1 }
