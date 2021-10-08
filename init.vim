@@ -18,7 +18,13 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'https://tpope.io/vim/surround'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 " Lang suppport
@@ -234,15 +240,13 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype', 'cocstatus'] ]
+      \              [ 'fileformat', 'fileencoding', 'filetype'] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head',
-      \   'cocstatus': 'coc#status'
+      \   'gitbranch': 'fugitive#head'
       \ },
       \ }
 
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 " Delete trailing spaces before save
 autocmd BufWritePre * %s/\s\+$//e
 " Copy filename to clipboard

@@ -1,16 +1,16 @@
-{
-  // Coc related preferences
-  // Filetypes to format on save
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "json",
-    "ruby"
-  ],
+// {
+//   // Coc related preferences
+//   // Filetypes to format on save
+//   "coc.preferences.formatOnSaveFiletypes": [
+//     "javascript",
+//     "typescript",
+//     "javascriptreact",
+//     "typescriptreact",
+//     "json",
+//     "ruby"
+//   ],
 
-  // Ruby
-  "solargraph.diagnostics": true,
-  "solargraph.formatting": true
-}
+//   // Ruby
+//   "solargraph.diagnostics": true,
+//   "solargraph.formatting": true
+// }
