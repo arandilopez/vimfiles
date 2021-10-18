@@ -18,15 +18,16 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'https://tpope.io/vim/surround'
-
+Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
+" LSP and Linting support
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-Plug 'tpope/vim-surround'
-Plug 'Yggdroot/indentLine'
+Plug 'dense-analysis/ale'
+Plug 'rhysd/vim-lsp-ale'
 " Lang suppport
 Plug 'sheerun/vim-polyglot'
 Plug 'kchmck/vim-coffee-script'
