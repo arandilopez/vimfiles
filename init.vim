@@ -17,7 +17,6 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
-Plug 'https://tpope.io/vim/surround'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 " LSP and Linting support
